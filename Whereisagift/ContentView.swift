@@ -9,15 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Text("Whereisagift")
-        }
-        .padding()
-    
-    }
-    
-}
+        TabView {
+                    Text("")
+                        .tabItem {
+                            Label("Главная", systemImage: "house")
+                        }
 
-#Preview {
-    ContentView()
+                    Text("")
+                        .tabItem {
+                            Label("Мои Желания", systemImage: "star")
+                        }
+
+                    Text("")
+                        .tabItem {
+                            Label("Друзья", systemImage: "person.2")
+                        }        }
+    }
 }
+    #Preview {
+        ContentView()
+    }
+
