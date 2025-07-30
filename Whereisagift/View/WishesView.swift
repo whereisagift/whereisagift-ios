@@ -9,20 +9,35 @@ import SwiftUI
 
 struct WishesView: View {
     var body: some View {
-            NavigationStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    PlusButtonView{
-                        print("🍏")
+        NavigationStack {
+            ZStack {
+                VStack(alignment: .leading) {
+                    NavigationLink(destination: WishListView()) {
+                        Text("Список желаний")
+                            .font(.title2)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 16)
                     }
-                    .padding(.trailing, 20)
-                    .padding(.bottom, 30)
-                    .navigationTitle("Мои желания")
+                    Spacer()
+                }
+
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        PlusButtonView {
+                            print("🍏")
+                        }
+                        .padding(.trailing, 20)
+                        .padding(.bottom, 30)
+                    }
                 }
             }
+            .navigationTitle("Мои желания")
         }
     }
-    #Preview {
-        WishesView()
-    }
+}
+
+#Preview {
+    WishesView()
+}
