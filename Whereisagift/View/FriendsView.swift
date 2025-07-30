@@ -10,7 +10,7 @@ import SwiftUI
 struct FriendsView: View {
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack(alignment: .leading) {
                 
             }
             .navigationTitle("Друзья")
