@@ -25,9 +25,10 @@ struct WishListView: View {
                             Text(product.title)
                                 .font(.headline)
                                 .lineLimit(2)
-                            Text(product.price)
+                            Text(product.price, format: .currency(code: "RUB"))
                                 .font(.subheadline)
                                 .foregroundColor(.blue)
+
                         }
                         .padding()
                         .background(Color(.systemBackground))
