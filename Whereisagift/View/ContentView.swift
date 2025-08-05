@@ -10,19 +10,21 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            
+
             WishesView()
                 .tabItem {
                     Label("Мои Желания", systemImage: "star")
+
                 }
-            
-           FriendsView()
+
+            FriendsView()
                 .tabItem {
                     Label("Друзья", systemImage: "person.2")
-                }        }
+                }
+        }
+        .tint(Color("AppPurpel"))
     }
 }
 #Preview {
     ContentView()
 }
-

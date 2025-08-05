@@ -17,6 +17,7 @@ struct WishesView: View {
                             .font(.title2)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 16)
+                            .tint(Color("AppPurpel"))
                     }
                     Spacer()
                 }

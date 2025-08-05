@@ -15,7 +15,7 @@ struct PlusButtonView: View{
                 .font(.title)
                 .frame(width: 56, height: 56)
                 .foregroundColor(.white)
-                .background(Color.blue)
+                .background(Color.appPurpel)
                 .clipShape(Circle())
                 .shadow(radius: 5)
             

@@ -27,7 +27,7 @@ struct WishListView: View {
                                 .lineLimit(2)
                             Text(product.price, format: .currency(code: "RUB"))
                                 .font(.subheadline)
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color("AppPurpel"))
 
                         }
                         .padding()
@@ -35,6 +35,7 @@ struct WishListView: View {
                         .cornerRadius(16)
                         .shadow(radius: 3)
                         .navigationTitle("Список Желаний")
+    
                     }
                 }
                 .padding()
