@@ -7,22 +7,32 @@
 
 import Foundation
 
-struct Product: Identifiable {
-    let id: UUID
-    let title: String
-    let price: Decimal
-    let imageName: String
+struct Wish: Identifiable, Codable {
+    let id: String
+    let name: String
+    let description: String
+    let img: URL
+    let price: Price
+    let rate: Double
+}
 
-    init(title: String, price: Decimal, imageName: String) {
-        self.id = UUID()
-        self.title = title
-        self.price = price
-        self.imageName = imageName
+struct Price: Codable {
+    let currency: String
+    let value: Double
+}
+
+extension Bundle {
+    func decode<T: Decodable>(_ file: String) -> T {
+        guard let url = self.url(forResource: file, withExtension: nil) else {
+            fatalError("❌ Failed to locate \(file) in bundle.")
+        }
+        guard let data = try? Data(contentsOf: url) else {
+            fatalError("❌ Failed to load \(file) from bundle.")
+        }
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch {
+            fatalError("❌ Failed to decode \(file) from bundle: \(error)")
+        }
     }
 }
-let products = [
-    Product(title: "iPhone 16 pro", price: 81990, imageName: "phone"),
-    Product(title: "Air Pods pro 2", price: 18990, imageName: "pods"),
-    Product(title: "Яндекс станция Станция", price: 16990, imageName: "station"),
-    Product(title: "Apple Watch Ultra 2", price: 82990, imageName: "watch"),
-]

@@ -7,45 +7,81 @@
 
 import SwiftUI
 
-
 struct WishListView: View {
-    let columns = [GridItem(.flexible()), GridItem(.flexible())]
-    
+    private let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+
+    @State private var wishes: [Wish] = Bundle.main.decode("wishes.json")
+
     var body: some View {
-        NavigationStack{
+        NavigationStack {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 16) {
-                    ForEach(products) { product in
-                        VStack(alignment: .leading, spacing: 8) {
-                            Image(product.imageName)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(height: 140)
-                                .cornerRadius(12)
-                            Text(product.title)
-                                .font(.headline)
-                                .lineLimit(2)
-                            Text(product.price, format: .currency(code: "RUB"))
-                                .font(.subheadline)
-                                .foregroundColor(Color("AppPurpel"))
-
-                        }
-                        .padding()
-                        .background(Color(.systemBackground))
-                        .cornerRadius(16)
-                        .shadow(radius: 3)
-                        .navigationTitle("Список Желаний")
-    
+                    ForEach(wishes) { wish in
+                        ProductCardView(wish: wish)
                     }
                 }
                 .padding()
             }
+            .navigationTitle("Список Желаний")
         }
     }
 }
-    
+
+struct ProductCardView: View {
+    let wish: Wish
+
+    var body: some View {
+        VStack {
+            AsyncImage(url: wish.img) { phase in
+                if let image = phase.image {
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                } else if phase.error != nil {
+                    Image(systemName: "photo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.gray)
+                } else {
+                    ProgressView()
+                }
+            }
+            .frame(height: 100)
+
+            Text(wish.name)
+                .font(.headline)
+                .lineLimit(1)
+
+            Text("\(wish.price.currency) \(String(format: "%.2f", wish.price.value))")
+                .font(.subheadline)
+
+            HStack(spacing: 4) {
+                Image(systemName: "star.fill")
+                Text(String(format: "%.1f", wish.rate))
+            }
+            .font(.caption)
+            .foregroundColor(.yellow)
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(Color.gray.opacity(0.5))
+        )
+    }
+}
+
+struct WishListView_Previews: PreviewProvider {
+    static var previews: some View {
+        WishListView()
+    }
+}
+
 #Preview {
     WishListView()
 }
+
 
 

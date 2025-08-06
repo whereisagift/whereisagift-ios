@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C360DAD2E43A29F00314A9B /* wishes.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C360DAB2E43A27B00314A9B /* wishes.json */; };
 		5CB7C1442E31219F0020C693 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CB7C13F2E31219F0020C693 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C360DAB2E43A27B00314A9B /* wishes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wishes.json; sourceTree = "<group>"; };
 		5CB7C0FD2E2FB88D0020C693 /* Whereisagift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereisagift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB7C10A2E2FB88E0020C693 /* WhereisagiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereisagiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CB7C1142E2FB88E0020C693 /* WhereisagiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhereisagiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			children = (
 				5CB7C0FF2E2FB88D0020C693 /* Whereisagift */,
 				5CB7C13F2E31219F0020C693 /* Assets.xcassets */,
+				5C360DAB2E43A27B00314A9B /* wishes.json */,
 				5CB7C10D2E2FB88E0020C693 /* WhereisagiftTests */,
 				5CB7C1172E2FB88E0020C693 /* WhereisagiftUITests */,
 				5CB7C0FE2E2FB88D0020C693 /* Products */,
@@ -219,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C360DAD2E43A29F00314A9B /* wishes.json in Resources */,
 				5CB7C1442E31219F0020C693 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
