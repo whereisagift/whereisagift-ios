@@ -54,21 +54,23 @@ struct ProductCardView: View {
             Text(wish.name)
                 .font(.headline)
                 .lineLimit(1)
+               
 
             Text("\(wish.price.currency) \(String(format: "%.2f", wish.price.value))")
                 .font(.subheadline)
-
+                
             HStack(spacing: 4) {
                 Image(systemName: "star.fill")
                 Text(String(format: "%.1f", wish.rate))
             }
             .font(.caption)
             .foregroundColor(.yellow)
+            
         }
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color.gray.opacity(0.5))
+                .stroke(Color("AppPurple"))
         )
     }
 }

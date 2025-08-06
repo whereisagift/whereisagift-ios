@@ -22,7 +22,7 @@ struct ContentView: View {
                     Label("Друзья", systemImage: "person.2")
                 }
         }
-        .tint(Color("AppPurpel"))
+        .tint(Color("AppPurple"))
     }
 }
 #Preview {
