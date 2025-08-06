@@ -1,0 +1,79 @@
+[
+        {
+          "id": "wish_001",
+          "name": "Smartwatch",
+          "description": "A next-gen smartwatch with fitness tracking and notifications.",
+          "img": "https://example.com/images/smartwatch.jpg",
+          "price": {
+            "currency": "USD",
+            "value": 249.99
+          },
+          "rate": 4.5
+        },
+        {
+          "id": "wish_002",
+          "name": "Noise-Cancelling Headphones",
+          "description": "Over-ear wireless headphones with active noise cancellation.",
+          "img": "https://example.com/images/headphones.jpg",
+          "price": {
+            "currency": "USD",
+            "value": 199.95
+          },
+          "rate": 4.8
+        },
+        {
+          "id": "wish_003",
+          "name": "Kindle Paperwhite",
+          "description": "Waterproof e-reader with adjustable warm light.",
+          "img": "https://example.com/images/kindle.jpg",
+          "price": {
+            "currency": "USD",
+            "value": 129.99
+          },
+          "rate": 4.7
+        },
+        {
+          "id": "wish_004",
+          "name": "LEGO Star Wars Millennium Falcon",
+          "description": "Detailed LEGO set of the iconic Star Wars ship.",
+          "img": "https://example.com/images/millennium_falcon.jpg",
+          "price": {
+            "currency": "USD",
+            "value": 159.99
+          },
+          "rate": 4.9
+        },
+        {
+          "id": "wish_005",
+          "name": "Instant Pot Duo",
+          "description": "7-in-1 electric pressure cooker and multi-cooker.",
+          "img": "https://example.com/images/instant_pot.jpg",
+          "price": {
+            "currency": "USD",
+            "value": 89.00
+          },
+          "rate": 4.6
+        },
+        {
+          "id": "wish_006",
+          "name": "Leather Journal",
+          "description": "Handcrafted leather-bound notebook for journaling.",
+          "img": "https://example.com/images/leather_journal.jpg",
+          "price": {
+            "currency": "USD",
+            "value": 34.50
+          },
+          "rate": 4.3
+        },
+        {
+          "id": "wish_007",
+          "name": "Portable Bluetooth Speaker",
+          "description": "Compact speaker with powerful sound and 12h battery life.",
+          "img": "https://example.com/images/bluetooth_speaker.jpg",
+          "price": {
+            "currency": "USD",
+            "value": 59.99
+          },
+          "rate": 4.4
+        }
+      ]
